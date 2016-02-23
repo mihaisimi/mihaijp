@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "jpmorgan",
+    "packageName": "com.jpmorgan.trade",
+    "packageFolder": "com/jpmorgan/trade",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "c1f0543dfe2c3167e9de20a42d3220394b2c659c",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
