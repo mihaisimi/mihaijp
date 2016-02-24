@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('jpmorganApp')
-    .controller('MainController', function ($scope, Principal, Stock) {
+    .controller('MainController', function ($scope, Principal, Stock, StockRatings) {
         Principal.identity().then(function(account) {
             $scope.account = account;
             $scope.isAuthenticated = Principal.isAuthenticated;
         });
 
         $scope.stocks = [];
+        $scope.selectedStock = {};
         $scope.loadAll = function() {
             Stock.query(function(result) {
                 $scope.stocks = result;
@@ -64,7 +65,12 @@ angular.module('jpmorganApp')
             $scope.gridApi = gridApi;
 
             gridApi.selection.on.rowSelectionChanged($scope, function (row) {
-                console.log(row.entity.id);
+                var stockId = row.entity.id;
+                StockRatings.get({id: stockId}, function(result) {
+                    $scope.stock = result;
+                    console.log(result);
+                });
+
             });
         };
 
