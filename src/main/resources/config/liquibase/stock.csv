@@ -1,0 +1,6 @@
+id;symbol;type;last_dividend;fixed_dividend;par_value
+1;ALE;COMMON;13;null;100
+2;GIN;PREFERRED;8;2;100
+3;JOE;COMMON;13;null;250
+4;POP;COMMON;8;null;100
+5;TEA;COMMON;0;null;100
