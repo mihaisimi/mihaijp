@@ -1,0 +1,9 @@
+{
+    "jpmorganApp": {
+        "StockTypeEnum" : {
+            "null": "",
+            "COMMON": "COMMON",
+            "PREFERRED": "PREFERRED"
+        }
+    }
+}
