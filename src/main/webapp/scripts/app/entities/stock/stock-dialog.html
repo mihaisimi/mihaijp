@@ -1,0 +1,69 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myStockLabel" translate="jpmorganApp.stock.home.createOrEditLabel">Create or edit a Stock</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="stock.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="jpmorganApp.stock.symbol" for="field_symbol">Symbol</label>
+            <input type="text" class="form-control" name="symbol" id="field_symbol"
+                    ng-model="stock.symbol"
+                    required />
+            <div ng-show="editForm.symbol.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.symbol.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="jpmorganApp.stock.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="stock.type" id="field_type" required>
+                <option value="COMMON" translate="jpmorganApp.StockTypeEnum.COMMON">COMMON</option>
+                <option value="PREFERRED" translate="jpmorganApp.StockTypeEnum.PREFERRED">PREFERRED</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="jpmorganApp.stock.lastDividend" for="field_lastDividend">LastDividend</label>
+            <input type="number" class="form-control" name="lastDividend" id="field_lastDividend"
+                    ng-model="stock.lastDividend"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="jpmorganApp.stock.fixedDividend" for="field_fixedDividend">FixedDividend</label>
+            <input type="number" class="form-control" name="fixedDividend" id="field_fixedDividend"
+                    ng-model="stock.fixedDividend"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="jpmorganApp.stock.parValue" for="field_parValue">ParValue</label>
+            <input type="number" class="form-control" name="parValue" id="field_parValue"
+                    ng-model="stock.parValue"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

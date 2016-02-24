@@ -1,0 +1,48 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "stockTrade",
+      "otherEntityName": "stockTrade",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "stock"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "symbol",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "type",
+      "fieldType": "StockTypeEnum",
+      "fieldValues": "COMMON,PREFERRED",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastDividend",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "fixedDividend",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "parValue",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "changelogDate": "20160224085800",
+  "dto": "no",
+  "pagination": "no"
+}

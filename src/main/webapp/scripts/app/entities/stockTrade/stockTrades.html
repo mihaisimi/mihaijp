@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="jpmorganApp.stockTrade.home.title">StockTrades</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="stockTrade.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="jpmorganApp.stockTrade.home.createLabel">Create new StockTrade
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="jpmorganApp.stockTrade.quantity">Quantity</span></th>
+                    <th><span translate="jpmorganApp.stockTrade.price">Price</span></th>
+                    <th><span translate="jpmorganApp.stockTrade.isSell">IsSell</span></th>
+                    <th><span translate="jpmorganApp.stockTrade.tradeDate">TradeDate</span></th>
+                    <th><span translate="jpmorganApp.stockTrade.stock">stock</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stockTrade in stockTrades track by stockTrade.id">
+                    <td><a ui-sref="stockTrade.detail({id:stockTrade.id})">{{stockTrade.id}}</a></td>
+                    <td>{{stockTrade.quantity}}</td>
+                    <td>{{stockTrade.price}}</td>
+                    <td>{{stockTrade.isSell}}</td>
+                    <td>{{stockTrade.tradeDate | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="stock.detail({id:stockTrade.stock.id})">{{stockTrade.stock.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="stockTrade.detail({id:stockTrade.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="stockTrade.edit({id:stockTrade.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="stockTrade.delete({id:stockTrade.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

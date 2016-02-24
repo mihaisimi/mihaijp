@@ -1,0 +1,27 @@
+{
+    "jpmorganApp": {
+        "stockTrade" : {
+            "home": {
+                "title": "StockTrades",
+                "createLabel": "Créer un nouveau StockTrade",
+                "createOrEditLabel": "Créer ou éditer un StockTrade",
+                "search": "Search for StockTrade"
+            },
+            "created": "Un nouveau StockTrade a été créé avec l'identifiant {{ param }}",
+            "updated": "Le StockTrade avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le StockTrade avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockTrade {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockTrade"
+            },
+            "quantity": "Quantity",
+            "price": "Price",
+            "isSell": "IsSell",
+            "tradeDate": "TradeDate",
+            "stock": "Stock"
+        }
+    }
+}
+

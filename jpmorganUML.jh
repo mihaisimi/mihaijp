@@ -1,0 +1,22 @@
+enum StockTypeEnum{
+    COMMON, PREFERRED
+}
+
+entity Stock{
+    symbol String required,
+    type StockTypeEnum required
+    lastDividend BigDecimal,
+    fixedDividend BigDecimal,
+    parValue BigDecimal
+}
+
+entity StockTrade{
+    quantity Long required,
+    price BigDecimal required,
+    isSell Boolean,
+    tradeDate ZonedDateTime required
+}
+
+relationship OneToMany{
+    Stock{stockTrade} to StockTrade{stock}
+}

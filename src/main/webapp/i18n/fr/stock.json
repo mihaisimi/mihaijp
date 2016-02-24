@@ -1,0 +1,28 @@
+{
+    "jpmorganApp": {
+        "stock" : {
+            "home": {
+                "title": "Stocks",
+                "createLabel": "Créer un nouveau Stock",
+                "createOrEditLabel": "Créer ou éditer un Stock",
+                "search": "Search for Stock"
+            },
+            "created": "Un nouveau Stock a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Stock avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Stock avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Stock {{ id }} ?"
+            },
+            "detail": {
+                "title": "Stock"
+            },
+            "symbol": "Symbol",
+            "type": "Type",
+            "lastDividend": "LastDividend",
+            "fixedDividend": "FixedDividend",
+            "parValue": "ParValue",
+            "stockTrade": "StockTrade"
+        }
+    }
+}
+

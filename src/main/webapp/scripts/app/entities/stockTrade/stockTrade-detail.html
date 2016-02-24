@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="jpmorganApp.stockTrade.detail.title">StockTrade</span> {{stockTrade.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="jpmorganApp.stockTrade.quantity">Quantity</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockTrade.quantity}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="jpmorganApp.stockTrade.price">Price</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockTrade.price}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="jpmorganApp.stockTrade.isSell">IsSell</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockTrade.isSell}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="jpmorganApp.stockTrade.tradeDate">TradeDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockTrade.tradeDate | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="jpmorganApp.stockTrade.stock">stock</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stock.detail({id:stockTrade.stock.id})">{{stockTrade.stock.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

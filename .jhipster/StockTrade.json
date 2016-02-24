@@ -1,0 +1,45 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "stock",
+      "otherEntityName": "stock",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "quantity",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "price",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "isSell",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "tradeDate",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160224085800",
+  "dto": "no",
+  "pagination": "no"
+}
